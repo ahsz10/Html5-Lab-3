@@ -1,0 +1,145 @@
+/* Task 1 */
+img{
+    transition: all 5s;
+    opacity: 1;
+}
+img:hover{
+    transition: all 5s;
+    opacity: 0;
+}
+
+/* Task 2 */
+form{
+    background-color: #b3efa6;
+    /* color: white; */
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 350px;
+    padding: 10px;
+    width: 350px;
+}
+input{
+border-radius: 12px;
+border: 0;
+box-sizing: border-box;
+font-size: 18px;
+height: 100%;
+padding: 4px 20px 0;
+width: 100%;
+}
+
+.submit {
+background-color: #08d;
+border-radius: 12px;
+border: 0;
+box-sizing: border-box;
+color: #eee;
+cursor: pointer;
+font-size: 18px;
+height: 50px;
+margin-top: 10px;
+text-align: center;
+width: 100%;
+}
+.submit:active {
+background-color: #06b;
+}
+
+input:invalid {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+#usrName:invalid + label::after{ 
+    content: "The required UserName may only be aserious of alphabetic characters"; 
+}
+
+#usrEmail:invalid +label::before{
+    content:"The required email address may not include any special characters other than the '@' sign";
+}
+
+#usrName:valid +label::after{
+    content:" Valid Username ";
+}
+#usrEmail:valid +label::after{
+    content:" Valid Email ";
+}
+
+/* Task 3 */
+.submit {
+background-color: #08d;
+border-radius: 12px;
+border: 0;
+box-sizing: border-box;
+color: #eee;
+cursor: pointer;
+font-size: 18px;
+height: 50px;
+margin-top: 10px;
+text-align: center;
+width: 100%;
+}
+
+.blink {
+    background-color: #f4b7e3;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+}
+.blink:hover{
+    animation: blinking 2000ms;
+    animation-iteration-count: 99;
+}
+
+@keyframes blinking {
+    0% { background-color: #83baed; box-shadow: 0 0 3px #00b209; }
+    50% { background-color: #83baed; box-shadow: 0 0 40px #1900ff; }
+    100% { background-color: #83baed; box-shadow: 0 0 3px #d30808; }
+}
+
+/* Task 4 */
+.grid{
+    display: grid;
+    margin: 5px;
+    margin-top: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(111, 156, 239);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    transform: rotate(45deg);
+}
+.grid > div{
+    margin: 5px;
+}
+.child1{
+    background-color: #08d;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.child2{
+    background-color: #08d;
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+.child3{
+    background-color: #08d;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.child4{
+    background-color: #08d;
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+.child5{
+    background-color: #08d;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
